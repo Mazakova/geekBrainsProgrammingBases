@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var userAnswer = prompt("Отгадайте загадку:  Речка спятила с ума — По домам пошла сама.");
+	userAnswer = userAnswer.toLowerCase();
+	
+	var answer = "водопровод";
+	/* var maxTryCount = 4
+
+	for (var tryCount = 1; maxTryCount > tryCount;tryCount++)
+	{ */
+		if (userAnswer == answer)
+		{
+			alert ("Поздравляем! Ответ правильный!!!");
+			userAnswer = prompt("Отгадайте вторую загадку: Два конца, два кольца, Посредине гвоздик.");
+			
+			answer = "ножницы";
+			if (userAnswer==answer)
+			{
+				alert("Поздравляем!  Вы отгадали все загадки!!!");
+				alert("Игра завершена!");
+				
+			}
+
+			
+			} else if (userAnswer != answer)
+			{
+			alert ("Неправильно. Вы проиграли");
+		} 
+		/* } */ 
+
+
+
+		/* if (tryCount=maxTryCount){
+
+		} */
+	
+
+</script>

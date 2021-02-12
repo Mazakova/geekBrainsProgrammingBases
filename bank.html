@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var deposite = +prompt("Введите сумму вклада (в рублях)");
+	while (isNaN(deposite) || deposite < 0)
+	{
+		deposite = +prompt("Сумму вклада необходимо указать в числах (положительных)")
+	} 
+		
+	var  percent = +prompt("Введите процент");
+	
+		
+	while (isNaN(percent) || percent < 0)
+	{
+			percent = +prompt("Величину процента начисления необходимо указать в числах (положительных)")
+	}
+	var summ = deposite;
+
+	
+	for (var year = 1; year <= 5; year++) 
+	{
+		summ = summ + summ/100*percent;
+		alert ("Итоговая сумма за " + year + "й год составит: " + summ + " рублей.");
+	}
+
+
+	
+
+
+</script>
