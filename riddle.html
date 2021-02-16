@@ -1,39 +1,49 @@
 <meta charset="utf-8">
 <script type="text/javascript">
-	
-	var userAnswer = prompt("Отгадайте загадку:  Речка спятила с ума — По домам пошла сама.");
-	userAnswer = userAnswer.toLowerCase();
-	
-	var answer = "водопровод";
-	/* var maxTryCount = 4
 
-	for (var tryCount = 1; maxTryCount > tryCount;tryCount++)
-	{ */
-		if (userAnswer == answer)
-		{
-			alert ("Поздравляем! Ответ правильный!!!");
-			userAnswer = prompt("Отгадайте вторую загадку: Два конца, два кольца, Посредине гвоздик.");
-			
+	var question;
+	var answer;
+	var userAnswer;
+	var rightCount = 0;
+
+	for (var attempt = 1; attempt < 5; attempt++)
+	{
+		if (attempt == 1){
+			question = "Речка спятила с ума — По домам пошла сама.";
+			answer = "водопровод";
+		}
+
+		if (attempt == 2){
+			question = "Отгадайте вторую загадку: Два конца, два кольца, Посредине гвоздик.";
 			answer = "ножницы";
-			if (userAnswer==answer)
-			{
-				alert("Поздравляем!  Вы отгадали все загадки!!!");
-				alert("Игра завершена!");
-				
-			}
+ 		}
 
-			
-			} else if (userAnswer != answer)
-			{
-			alert ("Неправильно. Вы проиграли");
-		} 
-		/* } */ 
+ 		if (attempt == 3){
+			question = "Отгадайте третью загадку: Не огонь, А жжется";
+			answer = "крапива";
+ 		}
+
+ 		if (attempt == 4){
+			question = "Отгадайте четвертую загадку: Красна девица Сидит в темнице,А коса на улице.";
+			answer = "морковка";
+ 		}
 
 
+ 		userAnswer = prompt("Отгадай загадку: " + question);
+ 		userAnswer = userAnswer.toLowerCase();
 
-		/* if (tryCount=maxTryCount){
+ 		if (userAnswer == answer) {
+ 			alert ("Правильно!");
+ 			rightCount += 1 ;
 
-		} */
-	
+ 		} else {
+ 			alert ("Неправильно.");
+ 		}
+	}
+	alert ("Количество правильных ответов: " + rightCount);
 
-</script>
+
+
+
+
+	</script>

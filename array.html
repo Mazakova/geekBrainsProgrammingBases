@@ -1,4 +1,4 @@
-<meta charset="utf-8">;
+ <meta charset="utf-8">;
 <script type="text/javascript">
 
 	function campareAnswers(userAnswer, answer){
@@ -16,15 +16,15 @@
 	function getrandomNumberArray(length){
 		var arr = [];
 		for (var i = 0; i < length ; i++){
-		var randomNumber = getRandomNumber(100);
-		arr.push(randomNumber);
+			var randomNumber = getRandomNumber(100);
+			arr.push(randomNumber);
 		}
 		return arr;
 	}
 	
 
 
-	var numbers = getrandomNumberArray;
+	var numbers = getrandomNumberArray(5);
 	
 
 	alert("Запомните числа и их порядок: " + numbers);
@@ -40,6 +40,6 @@
 	
 	var n =  getRandomNumber(numbers.length - 1);
 	userAnswer = +prompt("А как насчет числа под номером " + (n + 1) + "?");
-	campareAnswers(userAnswer, numbers[n];
+	campareAnswers(userAnswer, numbers[n]);
 
 </script>

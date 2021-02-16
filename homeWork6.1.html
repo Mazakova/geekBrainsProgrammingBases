@@ -1,0 +1,92 @@
+<meta charset="utf-8">;
+<script type="text/javascript">
+	// 1
+	// функция создает массив из size элементов, каждый из которых на 1 больше предыдущего. 
+	function getArray(size) {
+		var newArray = [];
+		for (var n = 1; n <= size; n++) {
+			newArray.push(n);
+		}
+
+		return newArray;
+	}
+
+	alert (getArray(5));
+
+
+
+	// 2 
+	var arrayForSumm = [1, 3, 6, 8, 9, 10];
+	// функция  возвращает сумму всех элементов массива arrayForSumm
+	function summ(massive) {
+		var summ = 0
+		for (var n = 0; n < massive.length; n++){
+			summ = summ + massive[n];
+		}
+		return summ;
+	}
+
+	alert(summ(arrayForSumm));
+
+
+	// 3
+	var arrayForMax = [1, 36, 83, 8, 23, 50];
+	// функция возвращает максимальное число из элементов массива
+	function maxOfArray(arrayOfNumbers){
+		var max = arrayOfNumbers[0];
+
+		for (var i=0; i < arrayOfNumbers.length; i++){
+
+			if (arrayOfNumbers[i] > max){
+				max = arrayOfNumbers[i];
+			} 			
+		}
+		return max;
+	}
+	alert (maxOfArray(arrayForMax));
+
+
+	// 4
+	var arrayForMin = [1, 36, 83, 8, 23, 50];
+	// функция возвращает минимальное значение
+	function minOfArray(arrayOfNumbers){
+		var min = arrayOfNumbers[0];
+
+		for (var i=0; i < arrayOfNumbers.length; i++){
+			if (arrayOfNumbers[i] < min){
+				min - arrayOfNumbers[i];
+			}
+		}
+		return min;
+	}
+	alert(minOfArray(arrayForMin));
+
+
+	//5
+		var arrayForEvens = [1, 36, 83, 8, 23, 50];
+	// функция возвращает только четные значения
+	function getAllEvensOfArray(arrayOfNumbers){
+
+		var result = [];
+		for (var i = 0; i < arrayOfNumbers.length; i++){
+			if ((arrayOfNumbers[i] % 2) == 0){
+				result.push(arrayOfNumbers[i]);
+			}
+		}
+		return result;
+	}
+
+	alert(getAllEvensOfArray(arrayForEvens));
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
